@@ -6,3 +6,6 @@ So, I decided to save us all from the agony and precompile it. You're welcome!
 ### CMakePresets.json
 * You can ignore this file, like that one sock that always goes missing in the laundry. Or, you can use it to configure the project with CMake.
 * You can set INSTALLATION_DIR to the directory where you want to install the library. Otherwise, it will be installed in the default directory, which is probably somewhere mysterious and hard to find.
+
+## Additional Information
+For more details about the QCustomPlot Library, visit [QCustomPlot's official website](https://www.qcustomplot.com/).
