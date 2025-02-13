@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "Release",
+      "description": "Release configuration with install directory",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/temp_release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_GENERATOR_TOOLSET": "v141",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/release",
+        "INSTALLATION_DIR": "${sourceDir}/build/release"
+      }
+    },
+    {
+      "name": "Debug",
+      "description": "Debug configuration with install directory",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/temp_debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_GENERATOR_TOOLSET": "v141",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/debug",
+        "INSTALLATION_DIR": "${sourceDir}/build/debug"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Release",
+      "configurePreset": "Release",
+      "configuration": "Release",
+      "jobs": 6
+    },
+    {
+      "name": "Debug",
+      "configurePreset": "Debug",
+      "configuration": "Debug",
+      "jobs": 6
+    }
+  ]
+}
